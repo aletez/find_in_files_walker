@@ -76,9 +76,9 @@ class FindInFilesWalkerListener(sublime_plugin.EventListener):
         self._wait_for_project_data(window, search_text, deadline)
 
 
-    def _wait_for_project_data(self, window, search_text, deadline):
+    def _wait_for_project_data(self, window, search_text, deadline, original_project):
         """Poll until the both windows have the same folders open."""
-        if window.project_data():
+        if window.project_data() == original_project:
             sublime.set_timeout(
                 lambda:
                 window.run_command("show_panel", {"panel": "find_in_files"}),
