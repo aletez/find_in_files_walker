@@ -14,7 +14,11 @@
       "args": {"action": "next"},
       "context":
       [
-          {"key": "setting.file_in_files_walker"},
+          {
+            "key": "setting.file_in_files_walker",
+            "operator": "equal",
+            "operand": true
+          },
       ],
   },
   {
@@ -23,7 +27,11 @@
       "args": {"action": "prev"},
       "context":
       [
-          {"key": "setting.file_in_files_walker"},
+          {
+            "key": "setting.file_in_files_walker",
+            "operator": "equal",
+            "operand": true
+          },
       ],
   },
   {
