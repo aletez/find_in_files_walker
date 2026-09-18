@@ -71,27 +71,50 @@ class FindInFilesWalkerListener(sublime_plugin.EventListener):
         original_project = original_window.project_data()
         window.set_project_data(original_project)
 
-        window.run_command("show_panel", {"panel": "find_in_files"})
-        deadline = time.time() + 1.0
-        self._wait_for_panel(window, search_text, deadline)
+        deadline = time.time() + 1.5
+
+        self._wait_for_project_data(window, search_text, deadline)
+
+
+    def _wait_for_project_data(self, window, search_text, deadline):
+        """Poll until the both windows have the same folders open."""
+        if window.project_data():
+            sublime.set_timeout(
+                lambda:
+                window.run_command("show_panel", {"panel": "find_in_files"}),
+            0)
+            sublime.set_timeout(
+                lambda:
+                self._wait_for_panel(window, search_text, deadline),
+            1)
+            return
+        if time.time() >= deadline:
+            raise TimeoutError
+
+        sublime.set_timeout(
+            lambda: self._wait_for_project_data(window, search_text, deadline),
+            10
+        )
+
+
 
     def _wait_for_panel(self, window, search_text, deadline):
         """Poll until the find_in_files panel is active, then proceed."""
         if window.active_panel() == "find_in_files":
             # Extra tick (timeout=0) so the panel has fully taken focus
             sublime.set_timeout(
-                lambda: self._paste_and_run_search(window, search_text), 0
+                lambda: self._paste_and_run_search(window, search_text, deadline), 0
             )
             return
 
         if time.time() >= deadline:
-            return
+            raise TimeoutError
 
         sublime.set_timeout(
             lambda: self._wait_for_panel(window, search_text, deadline), 10
         )
 
-    def _paste_and_run_search(self, window, search_text):
+    def _paste_and_run_search(self, window, search_text, deadline):
         """
         Paste search_text into the (focused) find-in-files search field
         via the clipboard, restoring the clipboard afterwards, then run
@@ -104,7 +127,6 @@ class FindInFilesWalkerListener(sublime_plugin.EventListener):
         # Extra tick (timeout=0) so the paste is applied before searching
         sublime.set_timeout(lambda: window.run_command("find_all"), 0)
 
-        deadline = time.time() + 1.0
         self._prepare_walk(window, deadline)
 
     def _prepare_walk(self, window, deadline):
@@ -122,7 +144,7 @@ class FindInFilesWalkerListener(sublime_plugin.EventListener):
             return
 
         if time.time() >= deadline:
-            return
+            raise TimeoutError
 
         sublime.set_timeout(lambda: self._prepare_walk(window, deadline), 10)
 
