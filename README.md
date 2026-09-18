@@ -52,8 +52,8 @@ after that.
 
 1. Open Preferences > Browse Packages
 2. In the Packages folder, either:
-   - Clone this repo: `git clone https://github.com/aletez/find_in_files_walker.git`
-   - Or download the ZIP, unpack it, rename the folder to `FindInFilesWalker`
+   - Clone this repo: `git clone https://github.com/aletez/find_in_files_walker.git` or download the ZIP and unpack it
+   - Rename the folder to `FindInFilesWalker`
 
 Keybindings work immediately.
 
