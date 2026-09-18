@@ -73,7 +73,7 @@ class FindInFilesWalkerListener(sublime_plugin.EventListener):
 
         deadline = time.time() + 1.5
 
-        self._wait_for_project_data(window, search_text, deadline)
+        self._wait_for_project_data(window, search_text, deadline, original_project)
 
 
     def _wait_for_project_data(self, window, search_text, deadline, original_project):
