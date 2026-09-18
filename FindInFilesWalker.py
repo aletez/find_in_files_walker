@@ -83,7 +83,7 @@ class FindInFilesWalkerListener(sublime_plugin.EventListener):
                 lambda:
                 window.run_command("show_panel", {
                     "panel": "find_in_files",
-                    "where": "<open folders>"
+                    "where": "<open folders>,<open files>"
                 }),
             0)
             sublime.set_timeout(
