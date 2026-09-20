@@ -1,7 +1,44 @@
 [
+
   {
-      "keys": ["alt+enter"],
+      "keys": ["enter"],
       "command": "open_walker_window",
+      "args": {"new_window": false},
+      "context":
+      [
+          {"key": "panel", "operand": "find_in_files"},
+          {"key": "panel_has_focus"},
+      ],
+  },
+  {
+      "keys": ["ctrl+enter"],
+      "command": "walk_matches",
+      "args": {"action": "next"},
+      "context":
+      [
+          {
+            "key": "panel_has_focus", "operand": false,
+            // "key": "setting.find_results_view",
+        },
+
+      ],
+  },
+  {
+      "keys": ["shift+ctrl+enter"],
+      "command": "walk_matches",
+      "args": {"action": "prev"},
+      "context":
+      [
+          {
+            "key": "panel_has_focus", "operand": false,
+            // "key": "setting.find_results_view",
+        },
+      ],
+  },
+  {
+      "keys": ["ctrl+enter"],
+      "command": "open_walker_window",
+      "args": {"new_window": true},
       "context":
       [
           {"key": "panel", "operand": "find_in_files"},
@@ -15,9 +52,8 @@
       "context":
       [
           {
-            "key": "setting.file_in_files_walker",
-            "operator": "equal",
-            "operand": true
+            "key": "panel_has_focus", "operand": false,
+            // "key": "setting.find_results_view",
           },
       ],
   },
@@ -28,33 +64,14 @@
       "context":
       [
           {
-            "key": "setting.file_in_files_walker",
-            "operator": "equal",
-            "operand": true
+            "key": "panel_has_focus", "operand": false,
+            // "key": "setting.find_results_view",
           },
-      ],
-  },
-  {
-      "keys": ["alt+enter"],
-      "command": "walk_matches",
-      "args": {"action": "next"},
-  },
-  {
-      "keys": ["alt+shift+enter"],
-      "command": "walk_matches",
-      "args": {"action": "prev"},
-      "context":
-      [
-          {"key": "setting.file_in_files_walker"},
       ],
   },
   {
       "keys": ["primary+shift+w"],
       "command": "close_walked_files",
-      "context":
-      [
-          {"key": "setting.file_in_files_walker"},
-      ],
   },
   {
       "keys": ["primary+shift+w"],

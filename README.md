@@ -36,17 +36,29 @@ this package to be the fix that was overdue.
 ## Getting started 🚀
 
 Install via Package Control, run a Find in Files search as usual, and
-hit `alt+enter` to open a Walker Window and start walking results
-immediately - no extra setup required. You can also use the Walker Window
-menu under `...` on the right side of the Find in Files panel or choose
-the command "Open File Walker Window" from the Palette.
+hit `Enter` to walk the results right there, or `Ctrl+Enter` to run the
+same search in a fresh window - no extra setup required.
 
-You can walk the results with arrows or with `alt+enter` for next
-and `shift+alt+enter` for previous.
+Once you're walking, step through matches with the arrow keys (or
+`Ctrl+Enter` / `Shift+Ctrl+Enter`).
 
-After you're done but want to keep one target file or the Find Results file open,
-just focus the view and hit `super+shift+w`. If you don't, add a `primary+w`
-after that.
+When you're done, `Primary+Shift+W` closes everything the walk opened - or,
+focused on the file you want to keep, it closes everything else instead.
+
+## Shortcuts ⌨️
+
+|      Shortcut      |                       Does                       |         Context          |        Command         |           Args          |
+|--------------------|--------------------------------------------------|--------------------------|------------------------|-------------------------|
+| `Enter`            | Run search in this window                        | Find in Files panel      | `open_walker_window`   | `{"new_window": false}` |
+| `Ctrl+Enter`       | Run search in a new window                       | Find in Files panel      | `open_walker_window`   | `{"new_window": true}`  |
+| `Ctrl+Enter`       | Next match                                       | Results view             | `walk_matches`         | `{"action": "next"}`    |
+| `Shift+Ctrl+Enter` | Previous match                                   | Results view             | `walk_matches`         | `{"action": "prev"}`    |
+| `Down`             | Next match                                       | Results view             | `walk_matches`         | `{"action": "next"}`    |
+| `Up`               | Previous match                                   | Results view             | `walk_matches`         | `{"action": "prev"}`    |
+| `Primary+Shift+W`  | Close other walked files and the results view    | Focused on a walked file | `keep_one_walked_file` | -                       |
+| `Primary+Shift+W`  | Close all walked files and keep the results view | Focused on Find Results  | `close_walked_files`   | -                       |
+
+`Primary` is `Cmd` on macOS, `Ctrl` on Windows/Linux.
 
 ## Manual installation 📦
 
