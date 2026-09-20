@@ -87,4 +87,4 @@ recognizes the case by view's settings.
 
 ## Platform support 💻
 
-Tested on macOS, ST ver. 4200. Windows and Linux are WIP.
+Tested on macOS, Windows; ST ver. 4200. Linux is WIP.
