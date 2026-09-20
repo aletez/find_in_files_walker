@@ -81,7 +81,7 @@ in the right panel.
 - `keep_one_walked_file` closes the Find Results and the target files beside the 
 one with focus (on top) in the right panel.
 
-The last two are natively bound to the same `super+shift+w` and the plugin 
+The last two are natively bound to the same `primary+shift+w` and the plugin 
 recognizes the case by view's settings. 
 
 
