@@ -47,16 +47,16 @@ focused on the file you want to keep, it closes everything else instead.
 
 ## Shortcuts ⌨️
 
-|      Shortcut      |                       Does                       |         Context          |        Command         |           Args          |
-|--------------------|--------------------------------------------------|--------------------------|------------------------|-------------------------|
-| `Enter`            | Run search in this window                        | Find in Files panel      | `open_walker_window`   | `{"new_window": false}` |
-| `Ctrl+Enter`       | Run search in a new window                       | Find in Files panel      | `open_walker_window`   | `{"new_window": true}`  |
-| `Ctrl+Enter`       | Next match                                       | Results view             | `walk_matches`         | `{"action": "next"}`    |
-| `Shift+Ctrl+Enter` | Previous match                                   | Results view             | `walk_matches`         | `{"action": "prev"}`    |
-| `Down`             | Next match                                       | Results view             | `walk_matches`         | `{"action": "next"}`    |
-| `Up`               | Previous match                                   | Results view             | `walk_matches`         | `{"action": "prev"}`    |
-| `Primary+Shift+W`  | Close other walked files and the results view    | Focused on a walked file | `keep_one_walked_file` | -                       |
-| `Primary+Shift+W`  | Close all walked files and keep the results view | Focused on Find Results  | `close_walked_files`   | -                       |
+|      Shortcut      |       Focus on      |                       Does                       |        Command         |           Args          |
+|--------------------|---------------------|--------------------------------------------------|------------------------|-------------------------|
+| `Enter`            | Find in Files panel | Run search in this window                        | `open_walker_window`   | `{"new_window": false}` |
+| `Ctrl+Enter`       | Find in Files panel | Run search in a new window                       | `open_walker_window`   | `{"new_window": true}`  |
+| `Ctrl+Enter`       | Results view        | Next match                                       | `walk_matches`         | `{"action": "next"}`    |
+| `Shift+Ctrl+Enter` | Results view        | Previous match                                   | `walk_matches`         | `{"action": "prev"}`    |
+| `Down`             | Results view        | Next match                                       | `walk_matches`         | `{"action": "next"}`    |
+| `Up`               | Results view        | Previous match                                   | `walk_matches`         | `{"action": "prev"}`    |
+| `Primary+Shift+W`  | A walked file       | Close other walked files and the results view    | `keep_one_walked_file` | -                       |
+| `Primary+Shift+W`  | Results view        | Close all walked files and keep the results view | `close_walked_files`   | -                       |
 
 `Primary` is `Cmd` on macOS, `Ctrl` on Windows/Linux.
 
