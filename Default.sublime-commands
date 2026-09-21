@@ -5,4 +5,13 @@
 	{"caption": "Find In Files Walker: Previous Match", "command": "walk_matches", "args": {"action": "prev"}},
 	{"caption": "Find In Files Walker: Close Walked Files", "command": "close_walked_files"},
 	{"caption": "Find In Files Walker: Keep One Walked File", "command": "keep_one_walked_file"},
+    {
+        "caption": "Preferences: FindInFilesWalker Key Bindings",
+        "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/FindInFilesWalker/Default.sublime-keymap",
+            "default": "// Key bindings in here override those in \"FindInFilesWalker/Default.sublime-keymap\",\n\n[\n\t$0\n]\n"
+        }
+    }
+
 ]
