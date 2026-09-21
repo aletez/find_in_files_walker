@@ -1,3 +1,8 @@
 [
-	{"caption": "Open File Walker Window", "command": "open_walker_window"},
+	{"caption": "Find In Files Walker: New Window", "command": "open_walker_window", "args": {"new_window": true}},
+	{"caption": "Find In Files Walker: Same Window", "command": "open_walker_window", "args": {"new_window": false}},
+	{"caption": "Find In Files Walker: Next Match", "command": "walk_matches", "args": {"action": "next"}},
+	{"caption": "Find In Files Walker: Previous Match", "command": "walk_matches", "args": {"action": "prev"}},
+	{"caption": "Find In Files Walker: Close Walked Files", "command": "close_walked_files"},
+	{"caption": "Find In Files Walker: Keep One Walked File", "command": "keep_one_walked_file"},
 ]
