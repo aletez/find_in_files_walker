@@ -65,20 +65,20 @@
           },
       ],
   },
-
-  // Example keybindings for closing files after walking
-
-  // {
-  //     "keys": ["primary+shift+w"],
-  //     "command": "close_walked_files",
-  // },
-  // {
-  //     "keys": ["primary+shift+w"],
-  //     "command": "keep_one_walked_file",
-  //     "context":
-  //     [
-  //         {"key": "setting.walked_closable"},
-  //     ],
-  // },
+  {
+      "keys": ["primary+shift+w"],
+      "command": "close_walked_files",
+      "context": [
+          { "key": "selector", "operand": "text.find-in-files" }
+      ]
+  },
+  {
+      "keys": ["primary+shift+w"],
+      "command": "keep_one_walked_file",
+      "context":
+      [
+          {"key": "setting.walked_closable"},
+      ],
+  },
 
 ]
