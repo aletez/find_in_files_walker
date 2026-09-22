@@ -26,12 +26,9 @@ one shot, or keep just the file you landed on.
 - **Drop-in on any Find Results view** ⚡ - works whether you opened your
   search the usual way or through the dedicated window flow
 
-## Why this took so long
+## Similar plugins
 
-Honestly, unclear - Find in Files is one of the most-used features in
-the editor, and "preview the match without losing my results" is an
-old, well-worn idea everywhere else code gets searched. I intend 
-this package to be the fix that was overdue.
+There is the terrific [FindInFiles-addon](https://packages.sublimetext.io/packages/FindInFiles-addon) by [kaste](https://packages.sublimetext.io/?q=author%3A%22kaste%22). It doesn't support the new_window movement though, which I use primarily.
 
 ## Getting started 🚀
 
@@ -59,6 +56,7 @@ focused on the file you want to keep, it closes everything else instead.
 | `Primary+Shift+W`  | Results view        | Close all walked files and keep the results view | `close_walked_files`   | -                       |
 
 `Primary` is `Cmd` on macOS, `Ctrl` on Windows/Linux.
+Both seemingly unconstrained bindings in fact run commands with restrictive `is_enabled` methods for reliability.
 
 ## Manual installation 📦
 
