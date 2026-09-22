@@ -18,7 +18,6 @@
       [
           {
             "key": "panel_has_focus", "operand": false,
-            // "key": "setting.find_results_view",
         },
 
       ],
@@ -31,7 +30,6 @@
       [
           {
             "key": "panel_has_focus", "operand": false,
-            // "key": "setting.find_results_view",
         },
       ],
   },
@@ -53,7 +51,6 @@
       [
           {
             "key": "panel_has_focus", "operand": false,
-            // "key": "setting.find_results_view",
           },
       ],
   },
@@ -65,21 +62,23 @@
       [
           {
             "key": "panel_has_focus", "operand": false,
-            // "key": "setting.find_results_view",
           },
       ],
   },
-  {
-      "keys": ["primary+shift+w"],
-      "command": "close_walked_files",
-  },
-  {
-      "keys": ["primary+shift+w"],
-      "command": "keep_one_walked_file",
-      "context":
-      [
-          {"key": "setting.walked_closable"},
-      ],
-  },
+
+  // Example keybindings for closing files after walking
+
+  // {
+  //     "keys": ["primary+shift+w"],
+  //     "command": "close_walked_files",
+  // },
+  // {
+  //     "keys": ["primary+shift+w"],
+  //     "command": "keep_one_walked_file",
+  //     "context":
+  //     [
+  //         {"key": "setting.walked_closable"},
+  //     ],
+  // },
 
 ]
