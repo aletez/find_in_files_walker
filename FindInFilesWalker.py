@@ -57,6 +57,9 @@ class OpenWalkerWindowCommand(sublime_plugin.WindowCommand):
 		panel = sublime.active_window().active_panel()
 		return panel == "find_in_files"
 
+	def name(self):
+		return "walker_open"
+
 	def run(self, new_window):
 		self.window.run_command("show_panel", {"panel": "find_in_files"})
 		self.window.run_command("find_all")
@@ -155,6 +158,10 @@ class WalkMatchesCommand(sublime_plugin.TextCommand):
 	view, not just ones OpenWalkerWindowCommand opened; "next"/"prev"
 	index on demand, so no separate "init" binding is needed.
 	"""
+
+	def name(self):
+		return "walker_walk"
+
 
 	def is_enabled(self):
 		"""Only available in Find Results panel."""        
@@ -364,6 +371,10 @@ class WalkMatchesCommand(sublime_plugin.TextCommand):
 class CloseWalkedFilesCommand(sublime_plugin.TextCommand):
 	"""Closes every view opened for walking, and resets the layout."""
 
+	def name(self):
+		return "walker_close_files"
+
+
 	def is_enabled(self):
 		"""Only available in Find Results panel
 		when walked views are still open."""
@@ -390,6 +401,10 @@ class CloseWalkedFilesCommand(sublime_plugin.TextCommand):
 class KeepOneWalkedFileCommand(sublime_plugin.TextCommand):
 	"""Closes results and walked files except the focused one;
 	collapses to a single column with that file kept open."""
+
+	def name(self):
+		return "walker_close_files_keep_one"
+
 
 	def is_enabled(self):
 		"""Only available in a walked view
