@@ -5,13 +5,13 @@
 	{"caption": "Find In Files Walker: Previous Match", "command": "walker_walk", "args": {"action": "prev"}},
 	{"caption": "Find In Files Walker: Close Walked Files", "command": "walker_close_files"},
 	{"caption": "Find In Files Walker: Keep One Walked File", "command": "walker_close_files_keep_one"},
-    {
-        "caption": "Preferences: FindInFilesWalker Key Bindings",
-        "command": "edit_settings",
-        "args": {
-            "base_file": "${packages}/FindInFilesWalker/Default.sublime-keymap",
-            "user_file": "${packages}/User/Default (${platform}).sublime-keymap"
-        }
-    }
+	{
+		"caption": "Preferences: FindInFilesWalker Key Bindings",
+		"command": "edit_settings",
+		"args": {
+			"base_file": "${packages}/FindInFilesWalker/Default.sublime-keymap",
+			"user_file": "${packages}/User/Default (${platform}).sublime-keymap"
+		}
+	}
 
 ]

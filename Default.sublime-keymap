@@ -1,84 +1,84 @@
 [
 
-  {
-      "keys": ["enter"],
-      "command": "walker_open",
-      "args": {"new_window": false},
-      "context":
-      [
-          {"key": "panel", "operand": "find_in_files"},
-          {"key": "panel_has_focus"},
-      ],
-  },
-  {
-      "keys": ["ctrl+enter"],
-      "command": "walker_open",
-      "args": {"new_window": true},
-      "context":
-      [
-          {"key": "panel", "operand": "find_in_files"},
-          {"key": "panel_has_focus"},
-      ],
-  },
-  {
-      "keys": ["ctrl+enter"],
-      "command": "walker_walk",
-      "args": {"action": "next"},
-      "context":
-      [
-          {
-            "key": "panel_has_focus", "operand": false,
-        },
+	{
+			"keys": ["enter"],
+			"command": "walker_open",
+			"args": {"new_window": false},
+			"context":
+			[
+					{"key": "panel", "operand": "find_in_files"},
+					{"key": "panel_has_focus"},
+			],
+	},
+	{
+			"keys": ["ctrl+enter"],
+			"command": "walker_open",
+			"args": {"new_window": true},
+			"context":
+			[
+					{"key": "panel", "operand": "find_in_files"},
+					{"key": "panel_has_focus"},
+			],
+	},
+	{
+			"keys": ["ctrl+enter"],
+			"command": "walker_walk",
+			"args": {"action": "next"},
+			"context":
+			[
+					{
+						"key": "panel_has_focus", "operand": false,
+				},
 
-      ],
-  },
-  {
-      "keys": ["shift+ctrl+enter"],
-      "command": "walker_walk",
-      "args": {"action": "prev"},
-      "context":
-      [
-          {
-            "key": "panel_has_focus", "operand": false,
-        },
-      ],
-  },
-  {
-      "keys": ["down"],
-      "command": "walker_walk",
-      "args": {"action": "next"},
-      "context":
-      [
-          {
-            "key": "panel_has_focus", "operand": false,
-          },
-      ],
-  },
-  {
-      "keys": ["up"],
-      "command": "walker_walk",
-      "args": {"action": "prev"},
-      "context":
-      [
-          {
-            "key": "panel_has_focus", "operand": false,
-          },
-      ],
-  },
-  {
-      "keys": ["alt+shift+w"],
-      "command": "walker_close_files",
-      "context": [
-          { "key": "selector", "operand": "text.find-in-files" }
-      ]
-  },
-  {
-      "keys": ["alt+shift+w"],
-      "command": "walker_close_files_keep_one",
-      "context":
-      [
-          {"key": "setting.walked_closable"},
-      ],
-  },
+			],
+	},
+	{
+			"keys": ["shift+ctrl+enter"],
+			"command": "walker_walk",
+			"args": {"action": "prev"},
+			"context":
+			[
+					{
+						"key": "panel_has_focus", "operand": false,
+				},
+			],
+	},
+	{
+			"keys": ["down"],
+			"command": "walker_walk",
+			"args": {"action": "next"},
+			"context":
+			[
+					{
+						"key": "panel_has_focus", "operand": false,
+					},
+			],
+	},
+	{
+			"keys": ["up"],
+			"command": "walker_walk",
+			"args": {"action": "prev"},
+			"context":
+			[
+					{
+						"key": "panel_has_focus", "operand": false,
+					},
+			],
+	},
+	{
+			"keys": ["alt+shift+w"],
+			"command": "walker_close_files",
+			"context": [
+					{ "key": "selector", "operand": "text.find-in-files" }
+			]
+	},
+	{
+			"keys": ["alt+shift+w"],
+			"command": "walker_close_files_keep_one",
+			"context":
+			[
+					{"key": "setting.walked_closable"},
+			],
+	},
 
 ]
