@@ -34,7 +34,7 @@ def _prepare_walk(window, deadline):
 	result_views = _get_result_views(window)
 	if result_views and _results_view_ready(result_views[0]):
 		func_init = lambda: result_views[0].run_command(
-			"walk_matches", {"action": "init"}
+			"walker_walk", {"action": "init"}
 		)
 		sublime.set_timeout(func_init, 0)
 		return
